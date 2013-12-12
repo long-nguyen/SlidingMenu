@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="font_size_menu_navititle">20sp</dimen>
-    <dimen name="padding_default">8dip</dimen>
-    <dimen name="margin_default">8dip</dimen>
-    <dimen name="size_default_squarebutton">44dip</dimen>
-</resources>

@@ -1,49 +1,0 @@
-10
-
-dir
-5
-https://project.kayac.com/svn/canary/apps/android/projects/trunk/Canary/src/com/kayac/canary
-https://project.kayac.com/svn/canary
-
-
-
-2013-12-11T07:24:55.733501Z
-4
-long-nguyen
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-5a707d7c-a49b-4d3a-8f15-4ddbd69516d6
-
-common
-dir
-
-database
-dir
-
-models
-dir
-
-remote
-dir
-
-services
-dir
-
-ui
-dir
-
-utils
-dir
-

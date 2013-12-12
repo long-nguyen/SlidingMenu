@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/naviact_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The sliding menu items, you can put a listview instead -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dip"
+        android:layout_marginTop="8dip"
+        android:background="@android:color/white"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:id="@+id/navipanel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:splitMotionEvents="false" >
+
+            <TextView
+                android:id="@+id/nav_about_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:padding="15dip"
+                android:text="@string/nav_about"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/nav_A_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:padding="15dip"
+                android:text="A fragment"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/nav_B_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:padding="15dip"
+                android:text="B fragment"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/nav_C_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:padding="15dip"
+                android:text="C fragment"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.kayac.slidingmenu.ui.views.DraggableLayout
+        android:id="@+id/navi_draggable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.kayac.slidingmenu.ui.views.DraggableLayout>
+
+</FrameLayout>

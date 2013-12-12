@@ -1,0 +1,18 @@
+package com.kayac.canary.ui.activities;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+import com.kayac.canary.R;
+
+public class AboutActivity extends Activity{
+	protected static final String PREF_IS_TUT_SHOWN = "pref_is_tutorial_shown";
+	public static String TAG=AboutActivity.class.getSimpleName();
+	private AboutActivity self;
+
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.about_activity);
+		self=this;
+	}
+}

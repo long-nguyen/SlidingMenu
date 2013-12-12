@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/layout
+END
+splash_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/layout/splash_activity.xml
+END
+navi_routershop_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/canary/!svn/ver/10/apps/android/projects/trunk/Canary/res/layout/navi_routershop_fragment.xml
+END
+navi_partnersearch_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/canary/!svn/ver/10/apps/android/projects/trunk/Canary/res/layout/navi_partnersearch_fragment.xml
+END
+quit_dialog.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/layout/quit_dialog.xml
+END
+navi_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/canary/!svn/ver/11/apps/android/projects/trunk/Canary/res/layout/navi_activity.xml
+END
+tut_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/layout/tut_activity.xml
+END
+navi_main_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/canary/!svn/ver/11/apps/android/projects/trunk/Canary/res/layout/navi_main_fragment.xml
+END
+about_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/canary/!svn/ver/10/apps/android/projects/trunk/Canary/res/layout/about_activity.xml
+END
+global_titlebar_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/layout/global_titlebar_layout.xml
+END
+login_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/layout/login_activity.xml
+END
+navi_routerbox_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/canary/!svn/ver/10/apps/android/projects/trunk/Canary/res/layout/navi_routerbox_fragment.xml
+END

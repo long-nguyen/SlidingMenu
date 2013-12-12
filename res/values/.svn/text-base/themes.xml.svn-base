@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme" parent="@android:style/Theme.Black.NoTitleBar">
+
+        <!-- Any customizations for your app running on pre-3.0 devices here -->
+    </style>
+     <style name="Theme_Tranlucent" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <!-- Any customizations for your app running on pre-3.0 devices here -->
+    </style>
+
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="SplashScreen">
+        <item name="android:padding">0dp</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="bt_title_square">
+        <item name="android:layout_width">@dimen/size_default_squarebutton</item>
+        <item name="android:layout_height">@dimen/size_default_squarebutton</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    
+     <style name="main_title_textstyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/size_default_squarebutton</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">-1</item>
+        <item name="android:shadowDy">-2</item>
+        <item name="android:shadowRadius">0.02</item>
+    </style>
+
+    <style name="Animations" />
+
+    <style name="Animations.SmileWindow">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/dissapeare_from_top</item>
+    </style>
+
+    <style name="Animations.ComeFromRight">
+        <item name="@android:windowEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="@android:windowExitAnimation">@anim/slide_out_from_left</item>
+    </style>
+
+    <style name="Animations.Fading">
+        <item name="@android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="@android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="Animations.PopWindow">
+        <item name="@android:windowEnterAnimation">@anim/apeare_from_center</item>
+        <item name="@android:windowExitAnimation">@anim/splashfadeout</item>
+    </style>
+
+    <style name="Animations.slideUpDown">
+        <item name="@android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="@android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="Animations.slideDownUp">
+        <item name="@android:windowEnterAnimation">@anim/slide_down_from_top</item>
+        <item name="@android:windowExitAnimation">@anim/slide_up_to_top</item>
+    </style>
+
+</resources>

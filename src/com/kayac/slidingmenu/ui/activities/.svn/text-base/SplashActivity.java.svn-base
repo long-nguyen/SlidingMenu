@@ -1,0 +1,112 @@
+package com.kayac.canary.ui.activities;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.widget.Toast;
+
+import com.kayac.canary.BuildConfig;
+import com.kayac.canary.R;
+import com.kayac.canary.common.Const;
+import com.kayac.canary.database.DatabaseManager;
+import com.kayac.canary.utils.Utils;
+
+public class SplashActivity extends Activity{
+	public static String TAG=SplashActivity.class.getSimpleName();
+	private Timer mTimer;
+	private TimerTask mTimerTask;
+	private SplashActivity self;
+
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.splash_activity);
+		self=this;
+		if(BuildConfig.DEBUG){
+			Log.d(TAG,"Max heap:"+Runtime.getRuntime().maxMemory());
+			Utils.enableStrictMode();
+		}
+		new SplashTask().execute();
+	}
+	
+	@Override public void onDestroy(){
+		super.onDestroy();
+		if(BuildConfig.DEBUG){
+			Log.i(TAG,"Splash is destroyed");
+		}
+	}
+	
+	public void startApp(){
+		mTimer = new Timer();
+		mTimerTask = new TimerTask()
+		{
+			@Override
+			public void run() {
+//				if(Utils.loadParam(self, TutorialActivity.PREF_IS_TUT_SHOWN)==null){
+//					startActivity(new Intent(self,TutorialActivity.class));
+//					finish();
+//				}else{
+					Intent intn = new Intent(self, NaviActivity.class);
+					startActivity(intn);
+					finish();
+//				}
+			}
+		};
+		mTimer.schedule(mTimerTask, 500);
+	}
+	
+	@Override
+	public void onPanelClosed(int featureId, Menu menu) {
+		if (mTimer != null) {
+			mTimer.cancel();
+		}
+		if (mTimerTask != null) {
+			mTimerTask .cancel();
+		}
+		mTimer = null;
+		mTimerTask = null;
+		super.onPanelClosed(featureId, menu);
+	}
+	
+	/**
+	 * Init default data: like init default database, init default values 
+	 * Load location base data
+	 * @author long-nguyen
+	 *
+	 */
+	public class SplashTask extends AsyncTask<String, Integer, Void> {
+		@Override
+		protected Void doInBackground(String... params) {
+			if(Utils.loadParam(self, Const.PREF_DB_INITED)==null){
+				//In case of default data is not inited
+				if(BuildConfig.DEBUG){
+					Log.d(TAG,"Insert new data");
+				}
+				DatabaseManager dbm = DatabaseManager.instance();
+				if(dbm.initDefaultData())
+				{
+					Utils.saveParam(self, "ok", Const.PREF_DB_INITED);	//Any value
+				}else
+				{
+					dbm.deleteDatabase();
+					Utils.clearParam(self, Const.PREF_DB_INITED);
+					Toast.makeText(self, R.string.error_init_app, Toast.LENGTH_SHORT).show();
+					finish();
+				}
+			}
+			return null;
+		}
+		@Override
+		public void onPostExecute(Void data){
+			super.onPostExecute(data);
+			startApp();
+		}
+	}
+
+
+}

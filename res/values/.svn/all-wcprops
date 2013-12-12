@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/values
+END
+msg_ids.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/canary/!svn/ver/10/apps/android/projects/trunk/Canary/res/values/msg_ids.xml
+END
+themes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/values/themes.xml
+END
+dimen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/values/dimen.xml
+END
+styles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/canary/!svn/ver/11/apps/android/projects/trunk/Canary/res/values/styles.xml
+END
+strings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/canary/!svn/ver/5/apps/android/projects/trunk/Canary/res/values/strings.xml
+END

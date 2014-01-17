@@ -59,7 +59,7 @@ public class DraggableLayout extends FrameLayout {
 	public static final boolean DEBUG = false;
 	public static final String TAG = DraggableLayout.class.getSimpleName();
 	public static final int DEFAULT_SCROLL_DURATION=150;
-	public static final float DEFAULT_MENU_WIDTH_PERCENT=0.75f;
+	public static float DEFAULT_MENU_WIDTH_PERCENT=0.75f;
 
 	/**Menu is open from left or right? */
 	private boolean mDefaultMenuSideLeft=false;
@@ -124,6 +124,16 @@ public class DraggableLayout extends FrameLayout {
 			}else{
 				mShadowDrawable.setBounds(screenSize.x, 0, screenSize.x+shadowBitmap.getWidth(), screenSize.y);
 			}
+		}
+	}
+	
+	/**
+	 * Set the width of mainScreen when menu open
+	 * @param width: size of screen in pixel when menu open
+	 */
+	public void setMainWindowWidthWhenMenuOpen(float width){
+		if(width>0&&width<screenSize.x){
+			DEFAULT_MENU_WIDTH_PERCENT=1-width/screenSize.x;
 		}
 	}
 	
@@ -404,6 +414,7 @@ public class DraggableLayout extends FrameLayout {
 		p.y = display.getHeight();
 		return p;
 	}
+	
 	
 	public void onScrollChanged(int l,int  t,int oldl,int oldt){
 		super.onScrollChanged(l, t, oldl, oldt);

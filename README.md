@@ -8,10 +8,11 @@ How to do:
 + Step 1: Declare your xml layout for navigation activity.
 Navigation activity has two views: 
 	+ ScrollView: Contains list of navigation menus(you can put any kinds of menu here).
-	+ DraggableLayout: Where you put your content fragment. This fragment can be scrolled, replaced.
+	+ DraggableLayout: Where you put your content fragments(or views). This fragment can be scrolled, replaced.
 	See res/layout/navi_activity.xml
-+ Step 2: Declare 3 Fragments: 
++ Step 2: Declare content fragments: 
 	AFragment,BFragment and CFragment. These fragments are main contents to be scrolled and replaced when click to menu buttons. Each fragments should implement one button events to open menu.
+	In my example I use fragments, but you can use views instead.
 + Step 3: Declare NaviActivity: This Activity will handle replacing fragments when user click to menu buttons.
 
 <pre>
@@ -36,6 +37,7 @@ When menu items are clicked, just replace the content fragments:
 
 <pre>
 
+//Add or replace content. These contents could be fragments or views. 
 private void switchPanel(final Fragment newFm) {
 		if(getSupportFragmentManager().findFragmentById(R.id.navi_draggable_layout)==null){
 			setContentFragment(new AFragment());
